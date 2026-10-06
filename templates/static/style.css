@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8faff);
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* PAGE */
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e8eaf2;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tag {
+    color: #667085;
+    font-size: 14px;
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* RESULT HERO */
+
+.result-hero {
+    margin-top: 45px;
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 20px 45px rgba(79, 70, 229, 0.2);
+}
+
+.badge {
+    display: inline-block;
+
+    background: rgba(255,255,255,0.18);
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.result-hero h1 {
+    font-size: 40px;
+    margin: 18px 0 12px;
+}
+
+.result-hero p {
+    color: #e8eaff;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.success-icon {
+    font-size: 90px;
+}
+
+
+/* CAREER CARD */
+
+.career-card {
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow: 0 10px 35px rgba(20,30,60,0.08);
+}
+
+.career-icon {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2ff;
+
+    font-size: 38px;
+}
+
+.small-title {
+    color: #6366f1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.career-content h2 {
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+.career-content p:last-child {
+    color: #7b8498;
+}
+
+
+/* SCORE */
+
+.score-card {
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(20,30,60,0.07);
+}
+
+.score-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.score-header h2 {
+    margin-bottom: 6px;
+}
+
+.score-header p {
+    color: #7b8498;
+    font-size: 14px;
+}
+
+.score-number {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #4f46e5;
+}
+
+.progress {
+    width: 100%;
+
+    height: 14px;
+
+    background: #e9eaf3;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    border-radius: 20px;
+
+    transition: width 1s ease;
+}
+
+
+/* RESULT GRID */
+
+.result-grid {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* INFO CARDS */
+
+.info-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(20,30,60,0.07);
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.section-title > span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2ff;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+}
+
+.section-title p {
+    color: #7b8498;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* SKILLS */
+
+.skills-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.skill-item {
+    padding: 14px;
+
+    background: #fff4f4;
+
+    border-left: 4px solid #ef4444;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.skill-item span {
+    margin-right: 8px;
+}
+
+
+/* SUCCESS */
+
+.success-message {
+    padding: 18px;
+
+    background: #ecfdf3;
+
+    color: #16803c;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+
+/* TIPS */
+
+.tip {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    line-height: 1.5;
+}
+
+.tip:last-child {
+    border-bottom: none;
+}
+
+.tip span {
+    min-width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+
+/* ROADMAP */
+
+.roadmap-card {
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 35px rgba(20,30,60,0.08);
+}
+
+.roadmap {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.roadmap-step {
+    padding: 20px;
+
+    border: 1px solid #e4e6ef;
+
+    border-radius: 15px;
+
+    background: #fafbff;
+}
+
+.step-number {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.step-content h3 {
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    color: #7b8498;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* BUTTON */
+
+.actions {
+    text-align: center;
+
+    margin: 30px 0 45px;
+}
+
+.back-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(79,70,229,0.25);
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #7b8498;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    .tag {
+        display: none;
+    }
+
+    .result-hero {
+        padding: 30px;
+    }
+
+    .result-hero h1 {
+        font-size: 30px;
+    }
+
+    .success-icon {
+        display: none;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap {
+        grid-template-columns: 1fr;
+    }
+
+    .career-card {
+        padding: 25px;
+    }
+
+    .career-content h2 {
+        font-size: 25px;
+    }
+}

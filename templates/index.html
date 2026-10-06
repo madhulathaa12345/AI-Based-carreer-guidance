@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Guidance System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header>
+            <div class="logo">🤖 AI Career Guide</div>
+            <div class="tag">Smart Career Decisions</div>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <div class="hero-text">
+                    <span class="badge">✨ AI POWERED</span>
+
+                    <h1>
+                        Discover Your
+                        <span>Perfect Career</span>
+                    </h1>
+
+                    <p>
+                        Tell us about your skills and interests.
+                        Our AI will help you find a suitable career path.
+                    </p>
+                </div>
+
+                <div class="hero-icon">
+                    🎯
+                </div>
+            </section>
+
+
+            <section class="card">
+
+                <div class="card-title">
+                    <div class="title-icon">👤</div>
+
+                    <div>
+                        <h2>Tell Us About Yourself</h2>
+                        <p>Select your current skill level</p>
+                    </div>
+                </div>
+
+
+                <form action="/predict" method="POST">
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label>🐍 Python Skill</label>
+
+                            <select name="python">
+                                <option value="1">Beginner</option>
+                                <option value="2">Basic</option>
+                                <option value="3">Intermediate</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label>🗄️ SQL Skill</label>
+
+                            <select name="sql">
+                                <option value="1">Beginner</option>
+                                <option value="2">Basic</option>
+                                <option value="3">Intermediate</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label>📊 Statistics</label>
+
+                            <select name="statistics">
+                                <option value="1">Beginner</option>
+                                <option value="2">Basic</option>
+                                <option value="3">Intermediate</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label>💻 Programming</label>
+
+                            <select name="programming">
+                                <option value="1">Beginner</option>
+                                <option value="2">Basic</option>
+                                <option value="3">Intermediate</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label>🗣️ Communication</label>
+
+                            <select name="communication">
+                                <option value="1">Beginner</option>
+                                <option value="2">Basic</option>
+                                <option value="3">Intermediate</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label>❤️ Career Interest</label>
+
+                            <select name="interest">
+                                <option value="1">Data Science</option>
+                                <option value="2">Data Analytics</option>
+                                <option value="3">Artificial Intelligence</option>
+                                <option value="4">Web Development</option>
+                                <option value="5">Cyber Security</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Get My Career Recommendation
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <section class="features">
+
+                <div class="feature">
+                    <div>🤖</div>
+                    <h3>AI Powered</h3>
+                    <p>Machine Learning based career prediction</p>
+                </div>
+
+                <div class="feature">
+                    <div>📈</div>
+                    <h3>Skill Analysis</h3>
+                    <p>Find the skills you need to improve</p>
+                </div>
+
+                <div class="feature">
+                    <div>🛣️</div>
+                    <h3>Career Roadmap</h3>
+                    <p>Get a step-by-step learning path</p>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+            <p>AI-Based Career Guidance System • Made with Python & Machine Learning</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

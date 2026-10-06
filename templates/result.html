@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Recommendation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🤖 AI Career Guide</div>
+        <div class="tag">Your Career • Your Future</div>
+    </header>
+
+
+    <main>
+
+        <!-- RESULT HERO -->
+        <section class="result-hero">
+
+            <div>
+                <span class="badge">✨ AI ANALYSIS COMPLETE</span>
+
+                <h1>Your Career Recommendation</h1>
+
+                <p>
+                    Based on your skills and interests, our AI has
+                    identified a suitable career path for you.
+                </p>
+            </div>
+
+            <div class="success-icon">
+                🎯
+            </div>
+
+        </section>
+
+
+        <!-- CAREER CARD -->
+        <section class="career-card">
+
+            <div class="career-icon">
+                🚀
+            </div>
+
+            <div class="career-content">
+
+                <p class="small-title">
+                    RECOMMENDED CAREER
+                </p>
+
+                <h2>{{ career }}</h2>
+
+                <p>
+                    This career matches your current skills and interests.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCORE -->
+        <section class="score-card">
+
+            <div class="score-header">
+                <div>
+                    <h2>AI Match Score</h2>
+                    <p>How well your profile matches this career</p>
+                </div>
+
+                <div class="score-number">
+                    {{ confidence }}%
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar"
+                     style="width: {{ confidence }}%;">
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- TWO CARDS -->
+        <div class="result-grid">
+
+            <!-- SKILLS -->
+            <section class="info-card">
+
+                <div class="section-title">
+                    <span>📚</span>
+
+                    <div>
+                        <h2>Skills to Improve</h2>
+                        <p>Focus on these skills</p>
+                    </div>
+                </div>
+
+
+                {% if skills %}
+
+                <div class="skills-list">
+
+                    {% for skill in skills %}
+
+                    <div class="skill-item">
+                        <span>⚡</span>
+                        {{ skill }}
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+                {% else %}
+
+                <div class="success-message">
+                    ✅ Great! You have a good skill foundation.
+                </div>
+
+                {% endif %}
+
+            </section>
+
+
+            <!-- QUICK TIPS -->
+            <section class="info-card">
+
+                <div class="section-title">
+                    <span>💡</span>
+
+                    <div>
+                        <h2>Career Tips</h2>
+                        <p>Useful next steps</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <span>1</span>
+                    Improve your technical skills.
+                </div>
+
+                <div class="tip">
+                    <span>2</span>
+                    Build real-world projects.
+                </div>
+
+                <div class="tip">
+                    <span>3</span>
+                    Create a strong resume and portfolio.
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- ROADMAP -->
+        <section class="roadmap-card">
+
+            <div class="section-title">
+                <span>🛣️</span>
+
+                <div>
+                    <h2>Career Roadmap</h2>
+                    <p>Your suggested learning journey</p>
+                </div>
+            </div>
+
+
+            <div class="roadmap">
+
+                {% for step in roadmap.split(' → ') %}
+
+                <div class="roadmap-step">
+
+                    <div class="step-number">
+                        {{ loop.index }}
+                    </div>
+
+                    <div class="step-content">
+                        <h3>{{ step }}</h3>
+
+                        {% if loop.index == 1 %}
+                        <p>Start with the fundamentals.</p>
+
+                        {% elif loop.index == 2 %}
+                        <p>Build strong practical knowledge.</p>
+
+                        {% elif loop.index == 3 %}
+                        <p>Practice concepts with examples.</p>
+
+                        {% else %}
+                        <p>Apply your knowledge through projects.</p>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        <!-- BUTTONS -->
+        <div class="actions">
+
+            <a href="/" class="back-button">
+                ← Check Again
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        AI-Based Career Guidance System • Python + Machine Learning
+    </footer>
+
+</div>
+
+</body>
+</html>
